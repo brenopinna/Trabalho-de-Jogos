@@ -7,11 +7,13 @@ pygame.font.init()
 
 
 font = font = pygame.font.Font(None, 50)
-Nome = "Seu Nome"
-rect =  (260, 100, 175, 35)
-
-random.seed(Nome)
+Nome = "Breno Pinna"
 x, y =  random.randint(0, 500), random.randint(0, 400)
+rect =  (x, y, 205, 35)
+# modifiquei o react para levar em conta certinho as coordenadas aleatorias!!
+
+# random.seed(Nome)
+# tambem tirei essa seed fixa pra ver a caixinha mudando de posicao em novas renderizacoes!!
 
 print(y)
 
@@ -27,5 +29,5 @@ while True:
         # Desenha
         screen.fill((30, 30, 30))
         pygame.draw.rect(screen, (255,255,255), rect)
-        screen.blit(font.render(Nome, True, (0,0,0)), (x, y))
+        screen.blit(font.render(Nome, True, (0,0,0)), (x,y))
         pygame.display.flip()
